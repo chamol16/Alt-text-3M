@@ -1,0 +1,29 @@
+{
+  "name": "Alt text Assistant",
+  "version": "1.0",
+  "description": "Tool for assistance in the process of creating alt text for images.",
+  "author": "Victor Vargas <vvargasjimenez@mmm.com>",
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; frame-ancestors 'none';"
+  },
+  "permissions": [
+    "tabs",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Alt Text Assistant"
+  },
+  "icons": {
+    "16": "images/icon_16.jpg",
+    "48": "images/icon_48.jpg",
+    "128": "images/icon_128.jpg"
+  },
+  "manifest_version": 3
+}
