@@ -1,6 +1,7 @@
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+const runtime = typeof browser !== "undefined" ? browser.runtime : chrome.runtime;
+
+runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === "generateAltText") {
-        // RECUERDA PONER TU CLAVE AQUÍ
         const API_KEY = "AIzaSyBZnx8uBZH6ityBUvcICacuahvFzMCJJNc";
         const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
